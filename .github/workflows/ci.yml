@@ -34,7 +34,7 @@ jobs:
         run: docker build -t supertask:${{ github.sha }} .
 
       - name: Run Trivy Vulnerability Scanner
-        uses: aquasecurity/trivy-action@v0.48.0
+        uses: aquasecurity/trivy-action@v0.20.0
         with:
           image-ref: supertask:${{ github.sha }}
           format: table
